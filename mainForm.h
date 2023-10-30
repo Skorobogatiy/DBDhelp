@@ -12,7 +12,7 @@ int thirdHooks = 0;
 int fourthHooks = 0;
 bool flag = false;
 MSG msg = { 0 };
-
+HWND hwnd;
 namespace DBDhelp {
 
 	using namespace System;
@@ -37,6 +37,7 @@ namespace DBDhelp {
 		//msg.message == WM_HOTKEY
 
 
+		
 
 		mainForm(void)
 		{
@@ -60,7 +61,7 @@ namespace DBDhelp {
 		/// </summary>
 		~mainForm()
 		{
-			HWND hwnd = static_cast<HWND>(this->Handle.ToPointer());
+			
 			if (components) {
 				flag = true;
 				delete components;
